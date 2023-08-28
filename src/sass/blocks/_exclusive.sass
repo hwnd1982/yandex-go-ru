@@ -1,0 +1,104 @@
+.exclusive
+  padding: 3.2rem 0 3.6rem
+  overflow: hidden
+  @media (min-width: 992px)
+    padding: 5rem 0 3.2rem
+    margin-bottom: -12.5%
+  &__title
+    font-size: 3.2rem
+    line-height: 100%
+    letter-spacing: -0.064rem
+    margin: 0 0 2.2rem
+    @media (min-width: 992px)
+      font-size: 4.8rem
+      letter-spacing: -0.096rem
+      max-width: 70%
+      margin: 0 0 3.45rem
+  &__description
+    margin: 0 0 4.3rem
+    @media (min-width: 992px)
+      margin: 0
+      max-width: 48%
+  &__gallery
+    margin: -4rem -5.6rem
+    padding: 4rem
+    @media (min-width: 992px)
+      transform: translate(-1.35%, -12.55%) rotate(2deg)
+      margin: 0
+      padding: 0
+      overflow: visible
+
+  &__list
+    position: relative
+    list-style: none
+    margin: 0
+    padding: 0
+    &::after
+      content: ''
+      position: absolute
+      top: -6rem
+      left: -7rem
+      right: -4rem
+      bottom: -5rem
+      background: url(../img/exclaiming.png) no-repeat right -3% top -7% / 18.5rem 18.5rem
+      z-index: 1
+    @media (min-width: 992px)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-auto-rows: 20rem 23.2rem
+      gap: 2.4rem 2.2rem
+      grid-auto-flow: dense
+      &::before
+        content: ''
+      &::after
+        content: ''
+        position: absolute
+        top: -20rem
+        left: -20rem
+        right: -20rem
+        bottom: -20rem
+        background: url(../img/exclaiming.png) no-repeat right 0% top 4%/37.5rem 37.5rem, url(../img/location.png) no-repeat left -6.5% top 29%/53rem 58rem, url(../img/coffee.png) no-repeat right -10% bottom 8%/60rem 65rem
+        z-index: 1
+        transform: rotate(-2deg)
+  &__slide
+    position: relative
+    border-radius: 4.8rem
+    padding-bottom: 100%
+    background-position: center
+    background-size: cover
+    @media (min-width: 992px)
+      padding-bottom: 0
+      grid-row: span 2
+      border-radius: 6.4rem
+    &.swiper-slide-active
+      @media (min-width: 992px)
+        grid-column: 1
+
+  &__controls
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 2.4rem
+    @media (min-width: 992px)
+      display: none
+  &__button
+    position: relative
+    padding: 0
+    background-color: #fff0
+    border-radius: 50%
+    border: none
+    color: #FFDE40
+    z-index: 1
+    transition: opacity .4s
+    &:disabled
+      opacity: 0.5
+    &-icon
+      position: relative
+      display: block
+      width: 4.8rem
+      height: 4.8rem
+      z-index: -1
+    &_direction
+      &_prev
+        transform: rotate(180deg)
+        margin-right: 1.2rem

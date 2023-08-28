@@ -1,0 +1,145 @@
+.hero
+  position: relative
+  padding: 3.2rem 0 1.8rem
+  overflow: hidden
+  z-index: 55
+  @media (min-width: 992px)
+    padding: 12.5rem 0 11.8rem
+  &__container
+    @media (min-width: 992px)
+      display: grid
+      grid-auto-columns: 42rem
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    opacity: 0.4
+    z-index: -2
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), linear-gradient(90deg, #FF5C4D 0%, #EB469F 25%, #8341EF 72.00%, #3F68F9 100%)
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)
+    z-index: -2
+  &__logo
+    width: 11.3rem
+    height: 3.2rem
+    background-image: url(../img/sprite.svg#logo)
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    margin-bottom: 2.8rem
+    @media (min-width: 992px)
+      width: 17.6rem
+      height: 5rem
+      margin-bottom: 6.4rem
+  &__title
+    font-size: 3.6rem
+    font-weight: 900
+    line-height: 1
+    letter-spacing: -0.072rem
+    margin: 0 0 2.4rem
+    @media (min-width: 992px)
+      font-size: 7.2rem
+      letter-spacing: -1.44px
+      margin: 0 0 3rem
+  &__description
+    font-size: 1.8rem
+    font-weight: 500
+    line-height: 130%
+    margin: 0
+    letter-spacing: -0.016rem
+    @media (min-width: 992px)
+      font-size: 2.4rem
+      margin-bottom: 3.4rem
+      letter-spacing: 0
+    &_price
+      &_new
+        position: relative
+        padding: .1rem .7rem .1rem .6rem
+        border-radius: 500px
+        background: radial-gradient(141.42% 141.42% at 100.00% -0.00%, #E0B8FF 0%, #B6B9FF 100%)
+        line-height: 120%
+        vertical-align: baseline
+        z-index: 2
+      &_old
+        position: relative
+        top: -0.25rem
+        right: 3.3rem
+        padding: .4rem .5rem .4rem 3.3rem
+        text-decoration: line-through
+        color: #808080
+        font-size: 1.3rem
+        line-height: 120%
+        vertical-align: baseline
+        text-transform: none
+        border-radius: 500px
+        background: linear-gradient(0deg, rgba(241, 241, 241, 0.60) 0%, rgba(241, 241, 241, 0.60) 100%), radial-gradient(141.42% 141.42% at 100.00% -0.00%, #E0B8FF 0%, #B6B9FF 100%)
+        z-index: 1
+      @media (min-width: 992px)
+        &_new
+          padding: .3rem .9rem .1rem 1rem
+          line-height: 124%
+          vertical-align: middle
+        &_old
+          top: -0.1rem
+          padding: 0.7rem 1rem 0.65rem 4.1rem
+          font-size: 1.6rem
+          vertical-align: middle
+
+  &__img
+    &-main
+      position: relative
+      top: -1.9rem
+      left: -0.7rem
+      width: 100%
+      padding-bottom: 86%
+      transform: rotate(-8.008deg)
+      background-image: url(../img/main.png)
+      background-position: center
+      background-size: contain
+      background-repeat: no-repeat
+    &-text
+      position: absolute
+      width: 13.5%
+      padding: 13.5%
+      top: 47%
+      left: 26%
+      transform: rotate(3.699deg)
+      background-image: url(../img/text.png)
+      background-color: rgba(255, 255, 255, 0)
+      background-size: cover
+    @media (min-width: 992px)
+      &-main
+        position: absolute
+        top: 1.5%
+        top: 1.2rem
+        left: 40.2%
+        left: calc(50% - 14.35rem)
+        width: 74.5906rem
+        padding-bottom: 74.5906rem
+        z-index: -1
+      &-text
+        width: 16.8%
+        padding: 16.8%
+        top: 46.8%
+        left: 21.1%
+  &__join
+    position: fixed
+    bottom: 3.2rem
+    left: 50%
+    width: 100%
+    transform: translate(-50%, 0)
+    max-width: min(calc(580px - 6.4rem), calc( 100vw - 6.4rem ))
+    z-index: 99
+    @media (min-width: 992px)
+      position: static
+      transform: none
+      max-width: 32rem

@@ -1,0 +1,42 @@
+.advantage
+  padding: 0 0 3.6rem
+  @media (min-width: 992px)
+    padding: 0 0 7.2rem
+  &__title
+    font-size: 3.2rem
+    font-weight: 900
+    line-height: 1
+    letter-spacing: -0.064rem
+    margin: 0 0 2.56rem
+    @media (min-width: 992px)
+      font-size: 5.6rem
+      letter-spacing: -0.112rem
+      max-width: 70%
+      margin: 0 0 4.1rem
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+    &>:not(:last-child)
+      margin-bottom: 2.4rem
+    @media (min-width: 992px)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      gap: 6.2rem 3.2rem
+      &>:not(:last-child)
+        margin-bottom: 0
+  &__item
+    display: flex
+    align-items: center
+    padding-left: 9.9rem
+    min-height: 8.3rem
+    background-position: left -27.5% top 50%
+    background-size: 16.5rem 16.5rem
+    background-repeat: no-repeat
+    @media (min-width: 992px)
+      padding-left: 0
+      align-items: flex-start
+      padding-top: 9.9rem
+      background-position: left -22.5% top -19%
+      background-size: 50% 50%
+      max-width: 40rem
